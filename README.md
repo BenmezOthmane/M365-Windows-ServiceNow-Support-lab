@@ -127,6 +127,8 @@ M365-windows-servicenow-support-lab/
 │   └── PowerShell/
 │
 └── screenshots/
+    ├── ServiceNow/
+    └── M365/
 ```
 
 ## Skills Demonstrated
