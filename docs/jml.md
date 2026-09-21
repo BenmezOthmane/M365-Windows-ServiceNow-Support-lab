@@ -155,10 +155,122 @@ The script is responsible for:
 - Performing post-provisioning validation
   
 9. Active Directory Provisioning
+
+The PowerShell automation provisions the account in Active Directory
+according to the employee information submitted through ServiceNow.
+
+The following attributes are configured:
+
+- Name
+- Username
+- User Principal Name
+- Department
+- Job Title
+- Organizational Unit
+- Account status
+- Department group membership
+  
 10. Department → OU / Group Mapping
+
+The automation maps each department to its corresponding
+Organizational Unit and Active Directory group.
+
+| Department | Organizational Unit | AD Group |
+|---|---|---|
+| IT | OU=IT,OU=Users,OU=Genitech | GG-IT-ServiceDesk |
+| HR | OU=HR,OU=Users,OU=Genitech | GG-HR-Users |
+| Sales | OU=Sales,OU=Users,OU=Genitech | GG-Sales-Users |
+| Finance | OU=Finance,OU=Users,OU=Genitech | GG-Finance-Users |
+
+This mapping allows the onboarding workflow to automatically place
+the new employee in the appropriate OU and department group.
+
 11. End-to-End Execution
+
+The complete Joiner workflow was tested from the ServiceNow Service
+Portal through to Active Directory.
+
+### Execution Sequence
+
+```text
+ServiceNow Service Portal
+        ↓
+JML - New Employee (Joiner)
+        ↓
+Catalog Request
+        ↓
+Flow Designer
+        ↓
+AD - Provision New User
+        ↓
+MID Server
+        ↓
+PowerShell
+        ↓
+Active Directory
+```
+The test was successfully completed and the resulting Active Directory account was created and configured according to the submitted request.
+
 12. Validation
+
+After execution, the resulting Active Directory account was verified.
+
+The validation covered:
+
+- User creation
+- Username
+- User Principal Name
+- Department
+- Job Title
+- Account status
+- Organizational Unit
+- Department group membership
+
+The validation confirmed that the information submitted through ServiceNow was correctly reflected in Active Directory.
+
 13. Troubleshooting
+
+During implementation, several integration issues were identified
+and resolved.
+
+### Incorrect Action Input Mapping
+
+Some Action inputs were initially mapped incorrectly.
+
+For example, the Job Title input was temporarily mapped to the
+Department variable.
+
+The mapping was corrected so that each Action input receives the
+corresponding Catalog Variable.
+
+### PowerShell Variable Handling
+
+The initial PowerShell execution used an incorrect method for
+retrieving the Flow Designer variables.
+
+The execution was corrected to use the PowerShell variables exposed
+by the ServiceNow PowerShell step.
+
+### Result
+
+After correcting the mappings and PowerShell variable handling,
+the complete Joiner workflow executed successfully.
+
 14. Security Considerations
+
+This implementation was developed for a controlled lab environment.
+
+The following production considerations should be applied before
+using a similar workflow in a production environment:
+
+- Do not hard-code passwords.
+- Use secure credential management.
+- Apply least-privilege permissions.
+- Protect ServiceNow and MID Server credentials.
+- Validate all user-supplied input.
+- Maintain audit logs.
+- Apply appropriate approval controls.
+- Never commit real credentials or secrets to GitHub.
+  
 15. Evidence
 16. Implementation Status
