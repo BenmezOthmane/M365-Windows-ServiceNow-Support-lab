@@ -1,4 +1,4 @@
-# JML Joiner Automation
+## JML Joiner Automation
 
 1. Purpose
 
@@ -14,6 +14,7 @@ The implemented workflow is:
 ServiceNow → MID Server → PowerShell → Active Directory
 
 The workflow was implemented, tested, and successfully validated in the lab environment.
+
 
 2. Implemented Architecture
 
@@ -43,6 +44,7 @@ PowerShell
       ↓
 Active Directory
 
+
 3. Joiner Workflow
 
 The implemented workflow follows these steps:
@@ -57,6 +59,7 @@ The implemented workflow follows these steps:
 8. The account is placed in the appropriate Organizational Unit.
 9. The user is added to the corresponding department group.
 10. The resulting account is validated.
+
     
 4. ServiceNow Catalog Item
 
@@ -75,6 +78,7 @@ Catalog Item:
 | Department | Employee department |
 | Job Title | Employee job title |
 | User Principal Name | Active Directory UPN |
+
 
 5. Flow Designer
 
@@ -96,6 +100,7 @@ PowerShell Execution
         ↓
 Active Directory
 
+
 6. Custom Action
 
 A custom global Action was created to handle the Active Directory
@@ -115,6 +120,7 @@ Action name:
 | Department | Department |
 | Job_Title | Job_Title |
 | User_Principal_Name | user_principal_name |
+
 
 7. MID Server
 
@@ -136,6 +142,7 @@ PowerShell
    ↓
 Active Directory
 
+
 8. PowerShell Automation
 
 The Active Directory provisioning logic is implemented in:
@@ -153,6 +160,7 @@ The script is responsible for:
 - Setting the required user attributes
 - Adding the user to the appropriate group
 - Performing post-provisioning validation
+
   
 9. Active Directory Provisioning
 
@@ -169,6 +177,7 @@ The following attributes are configured:
 - Organizational Unit
 - Account status
 - Department group membership
+
   
 10. Department → OU / Group Mapping
 
@@ -184,6 +193,7 @@ Organizational Unit and Active Directory group.
 
 This mapping allows the onboarding workflow to automatically place
 the new employee in the appropriate OU and department group.
+
 
 11. End-to-End Execution
 
@@ -211,6 +221,7 @@ Active Directory
 ```
 The test was successfully completed and the resulting Active Directory account was created and configured according to the submitted request.
 
+
 12. Validation
 
 After execution, the resulting Active Directory account was verified.
@@ -227,6 +238,7 @@ The validation covered:
 - Department group membership
 
 The validation confirmed that the information submitted through ServiceNow was correctly reflected in Active Directory.
+
 
 13. Troubleshooting
 
@@ -256,6 +268,7 @@ by the ServiceNow PowerShell step.
 After correcting the mappings and PowerShell variable handling,
 the complete Joiner workflow executed successfully.
 
+
 14. Security Considerations
 
 This implementation was developed for a controlled lab environment.
@@ -271,6 +284,37 @@ using a similar workflow in a production environment:
 - Maintain audit logs.
 - Apply appropriate approval controls.
 - Never commit real credentials or secrets to GitHub.
+
   
 15. Evidence
+
+The following evidence documents the implemented Joiner workflow.
+
+| Evidence | File |
+|---|---|
+| ServiceNow Catalog Item | `02-servicenow-catalog-item.png` |
+| Flow Designer | `03-servicenow-flow.png` |
+| Custom Action | `04-servicenow-action.png` |
+| Successful Execution | `05-jml-execution-success.png` |
+| Active Directory Result | `06-ad-user-created.png` |
+
+
 16. Implementation Status
+
+### Completed
+
+- [x] ServiceNow Joiner Catalog Item
+- [x] Catalog variables
+- [x] Flow Designer workflow
+- [x] Custom AD provisioning Action
+- [x] MID Server integration
+- [x] PowerShell provisioning
+- [x] Department-to-OU mapping
+- [x] Department-to-group mapping
+- [x] Active Directory account provisioning
+- [x] End-to-end testing
+- [x] Active Directory validation
+
+### Current Status
+
+**Joiner automation: Implemented and successfully validated.**
