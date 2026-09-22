@@ -79,6 +79,7 @@ Catalog Item:
 | Job Title | Employee job title |
 | User Principal Name | Active Directory UPN |
 
+![ServiceNow Joiner Catalog Item](../screenshots/jml/servicenow-catalog-item.png)
 
 5. Flow Designer
 
@@ -100,6 +101,7 @@ PowerShell Execution
         ↓
 Active Directory
 
+![JML Flow Designer](../screenshots/jml/servicenow-flow.png)
 
 6. Custom Action
 
