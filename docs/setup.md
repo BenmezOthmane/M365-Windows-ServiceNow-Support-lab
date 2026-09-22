@@ -49,7 +49,7 @@ Genitech
     ├── Finance
     └── IT
 
-3. Active Directory
+# 3. Active Directory
 3.1 Domain
 
 The Windows Server environment provides the Active Directory Domain
@@ -65,7 +65,7 @@ User and group management
 Organizational Unit management
 Authentication for domain users
 
-4. Active Directory Organizational Structure
+# 4. Active Directory Organizational Structure
 The lab uses department-based Organizational Units.
 
 OU=Genitech
@@ -75,7 +75,7 @@ OU=Genitech
     ├── OU=Finance
     └── OU=IT
 
-5. Active Directory Groups
+# 5. Active Directory Groups
 Department-based security groups were created to represent initial
 department access.
 
@@ -88,7 +88,7 @@ department access.
 
 The Joiner automation uses this mapping when provisioning new users.
 
-6. Existing User Structure
+# 6. Existing User Structure
 
 The lab contains users representing different departments and
 administrative roles.
@@ -112,7 +112,7 @@ Finance
 
 Additional test accounts may be created during automation testing.
 
-7. Windows Endpoints
+# 7. Windows Endpoints
 Two Windows 10 Pro endpoints are included in the lab:
 WIN-USER-01
 WIN-USER-02
@@ -129,7 +129,7 @@ Application issues
 Connectivity problems
 User support
 
-8. ServiceNow
+# 8. ServiceNow
 
 ServiceNow is used as the ITSM platform for the project.
 
@@ -144,7 +144,7 @@ JML requests
 The Joiner automation uses a Service Catalog Item named:
 JML - New Employee (Joiner)
 
-9. MID Server
+# 9. MID Server
 
 A ServiceNow MID Server was configured to provide connectivity
 between the ServiceNow instance and the on-premises Windows
@@ -160,7 +160,7 @@ Its primary role in the current implementation is to execute
 PowerShell automation against the on-premises Active Directory
 environment.
 
-10. PowerShell
+# 10. PowerShell
 
 PowerShell is used as the automation layer for Active Directory
 administration.
@@ -180,7 +180,7 @@ The script is responsible for:
 
 automation/JML/
 
-11. Microsoft 365 / Entra ID
+# 11. Microsoft 365 / Entra ID
 
 The lab also includes Microsoft 365 and Microsoft Entra ID components
 for identity and endpoint support practice.
@@ -200,7 +200,7 @@ Integration with the broader IT support workflow
 Microsoft Entra ID is used alongside the on-premises Active Directory
 environment to represent a hybrid identity environment.
 
-12. Hybrid Identity
+# 12. Hybrid Identity
 
 The lab combines:
 On-Premises Identity
@@ -217,7 +217,7 @@ be represented in the Microsoft Entra environment.
 This provides a more realistic enterprise identity administration
 scenario than using an isolated cloud-only environment.
 
-13. ServiceNow ↔ Active Directory Integration
+# 13. ServiceNow ↔ Active Directory Integration
 
 The current automation path is:
 ServiceNow
@@ -243,7 +243,7 @@ workflow.
 Detailed Joiner implementation is documented separately in:
 docs/jml.md
 
-##14. Security and Lab Considerations
+# 14. Security and Lab Considerations
 
 This environment is a controlled lab and is designed for learning,
 testing, and portfolio development.
@@ -263,7 +263,7 @@ Production environments would require additional controls such as:
 No production credentials or secrets should be stored in the
 repository.
 
-##15. Setup Status
+# 15. Setup Status
 
 The following core components have been configured for the current
 project:
