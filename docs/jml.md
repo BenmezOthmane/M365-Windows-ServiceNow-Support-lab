@@ -79,7 +79,7 @@ Catalog Item:
 | Job Title | Employee job title |
 | User Principal Name | Active Directory UPN |
 
-![ServiceNow Joiner Catalog Item](../screenshots/jml/servicenow-catalog-item.png)
+![ServiceNow Joiner Catalog Item](../screenshots/ServiceNow/servicenow-catalog-item.png)
 
 5. Flow Designer
 
@@ -101,7 +101,7 @@ PowerShell Execution
         ↓
 Active Directory
 
-![JML Flow Designer](../screenshots/jml/servicenow-flow.png)
+![JML Flow Designer](../screenshots/ServiceNow/servicenow-flow.png)
 
 6. Custom Action
 
@@ -123,7 +123,7 @@ Action name:
 | Job_Title | Job_Title |
 | User_Principal_Name | user_principal_name |
 
-![AD Provision Action](../screenshots/jml/servicenow-action.png)
+![AD Provision Action](../screenshots/ServiceNow/servicenow-action.png)
 
 7. MID Server
 
@@ -224,7 +224,7 @@ Active Directory
 ```
 The test was successfully completed and the resulting Active Directory account was created and configured according to the submitted request.
 
-![Successful Joiner Execution](../screenshots/jml/jml-execution-success.png)
+![Successful Joiner Execution](../screenshots/ServiceNow/jml-execution-success.png)
 
 12. Validation
 
@@ -243,6 +243,7 @@ The validation covered:
 
 The validation confirmed that the information submitted through ServiceNow was correctly reflected in Active Directory.
 
+![Active Directory User](../screenshots/ServiceNow/ad-user-created.png)
 
 13. Troubleshooting
 
@@ -296,11 +297,11 @@ The following evidence documents the implemented Joiner workflow.
 
 | Evidence | File |
 |---|---|
-| ServiceNow Catalog Item | `02-servicenow-catalog-item.png` |
+| ServiceNow Catalog Item | `servicenow-catalog-item.png` |
 | Flow Designer | `03-servicenow-flow.png` |
-| Custom Action | `04-servicenow-action.png` |
-| Successful Execution | `05-jml-execution-success.png` |
-| Active Directory Result | `06-ad-user-created.png` |
+| Custom Action | `servicenow-action.png` |
+| Successful Execution | `jml-execution-success.png` |
+| Active Directory Result | `ad-user-created.png` |
 
 
 16. Implementation Status
