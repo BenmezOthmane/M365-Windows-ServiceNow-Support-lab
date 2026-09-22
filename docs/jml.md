@@ -120,8 +120,8 @@ workflow was successfully implemented and validated.
 ## Evidence
 
 Screenshots are stored under:
-screenshots/ServiceNow/
-screenshots/M365/
+- screenshots/ServiceNow/
+- screenshots/M365/
 
 Evidence includes:
 
