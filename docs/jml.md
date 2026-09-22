@@ -123,6 +123,7 @@ Action name:
 | Job_Title | Job_Title |
 | User_Principal_Name | user_principal_name |
 
+![AD Provision Action](../screenshots/jml/servicenow-action.png)
 
 7. MID Server
 
