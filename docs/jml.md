@@ -224,6 +224,7 @@ Active Directory
 ```
 The test was successfully completed and the resulting Active Directory account was created and configured according to the submitted request.
 
+![Successful Joiner Execution](../screenshots/jml/jml-execution-success.png)
 
 12. Validation
 
