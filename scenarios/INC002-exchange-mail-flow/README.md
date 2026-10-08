@@ -1,0 +1,18 @@
+# INC002 — Exchange Online Mail Flow Failure
+
+## Incident Overview
+
+A controlled mail flow failure was simulated in Exchange Online to investigate an email delivery issue.
+
+The test demonstrated the complete troubleshooting lifecycle:
+
+```text
+Fault Injection
+      ↓
+Investigation
+      ↓
+Root Cause Identification
+      ↓
+Remediation
+      ↓
+Validation
